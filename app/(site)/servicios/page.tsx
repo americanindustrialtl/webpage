@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import ServicesGrid from "@/components/services-grid"
 import ProcessSection from "@/components/process-section"
+import VideoSection from "@/components/video-section"
 
 export const metadata: Metadata = {
   title: "Servicios de Revestimiento y Mantenimiento Industrial | American Industrial",
@@ -36,10 +37,33 @@ export default function ServiciosPage() {
           "Soluciones de protección y mantenimiento para tanques industriales, diseñadas para entornos de alta exigencia en toda Latinoamérica."
         }
       </p>
+
       <ServicesGrid />
+
+      {/* Video Section - Service Process */}
+      <section className="mt-16 mb-12">
+        <VideoSection
+          title="Proceso de Aplicación Certificado NACE"
+          description="Observe nuestro proceso completo desde la preparación de superficie hasta la aplicación final. Cada etapa es ejecutada siguiendo estrictos protocolos de calidad internacional para garantizar la máxima protección de sus activos."
+          videoSrc="/videos/service-process"
+          posterSrc="/videos/posters/service-process.jpg"
+        />
+      </section>
+
       <div className="mt-12">
         <ProcessSection />
       </div>
+
+      {/* Video Section - Quality Control */}
+      <section className="mt-16">
+        <VideoSection
+          title="Control de Calidad y Certificación"
+          description="Nuestro riguroso proceso de control de calidad incluye inspecciones en cada fase, documentación completa y certificación final. Vea cómo garantizamos los más altos estándares en cada proyecto."
+          videoSrc="/videos/quality-control"
+          posterSrc="/videos/posters/quality-control.jpg"
+          reverse={true}
+        />
+      </section>
     </div>
   )
 }

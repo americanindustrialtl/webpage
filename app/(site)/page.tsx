@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/services-grid"
 import ProcessSection from "@/components/process-section"
 import StatsRow from "@/components/stats-row"
 import MissionBanner from "@/components/mission-banner"
+import VideoSection from "@/components/video-section"
 
 export const metadata: Metadata = {
   title: "Sistemas de Revestimiento Industrial de Tanques | American Industrial",
@@ -63,6 +64,19 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
       <Hero />
+
+      {/* Video Section 1 - Company Overview */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <VideoSection
+            title="25 Años Protegiendo la Industria Latinoamericana"
+            description="Descubra cómo American Industrial ha revolucionado la protección de tanques industriales con tecnología americana de vanguardia, sirviendo a más de 500 clientes en 7 países de Latinoamérica."
+            videoSrc="/videos/company-overview"
+            posterSrc="/videos/posters/company-overview.jpg"
+          />
+        </div>
+      </section>
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -76,6 +90,20 @@ export default function Page() {
           <ServicesGrid />
         </div>
       </section>
+
+      {/* Video Section 2 - Technology Showcase */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <VideoSection
+            title="Tecnología de Aplicación Avanzada"
+            description="Vea en acción nuestros equipos especializados y procesos certificados NACE. Cada aplicación es ejecutada por técnicos certificados con los más altos estándares de calidad internacional."
+            videoSrc="/videos/technology-showcase"
+            posterSrc="/videos/posters/technology-showcase.jpg"
+            reverse={true}
+          />
+        </div>
+      </section>
+
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4">
           <ProcessSection />

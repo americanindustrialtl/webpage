@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { inter, robotoMono } from "../styles/fonts"
 import "./globals.css"
 import { getSiteUrl } from "@/lib/site"
+import WhatsAppButton from "@/components/whatsapp-button"
 
 function getSafeMetadataBase() {
   try {
@@ -45,7 +46,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${robotoMono.variable}`}>
-      <body className="min-h-dvh antialiased">{children}</body>
+      <body className="min-h-dvh antialiased">
+        {children}
+        <WhatsAppButton
+          phoneNumber="+1234567890"
+          message="Hola, me gustaría solicitar información sobre sus servicios de revestimiento industrial."
+          position="bottom-right"
+        />
+      </body>
     </html>
   )
 }

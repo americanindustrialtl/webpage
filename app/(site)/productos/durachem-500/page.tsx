@@ -161,7 +161,7 @@ export default function Durachem500Page() {
 
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-3xl opacity-20"></div>
-            <div className="relative bg-white rounded-3xl p-6 shadow-2xl border border-gray-100">
+            <div className="relative bg-white rounded-3xl p-6 shadow-2xl border border-gray-100 px-2 py-2">
               <Image
                 src="/images/durachem-500-application.png"
                 width={600}

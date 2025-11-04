@@ -2,7 +2,7 @@
 
 export const whatsappConfig = {
   // Your WhatsApp business phone number (international format, no + or spaces)
-  phoneNumber: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "1234567890",
+  phoneNumber: process.env.NEXT_PUBLIC_WHATSAPP_PHONE,
 
   // Default messages for different pages
   messages: {

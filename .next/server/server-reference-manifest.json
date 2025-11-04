@@ -1,5 +1,17 @@
 {
-  "node": {},
+  "node": {
+    "60c5e512be1af67df2567ab1b483a40bc000f2aaa5": {
+      "workers": {
+        "app/(site)/contacto/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fhowdy%2Fdev%2Fwebpage%2Fapp%2Factions.ts%22%2C%5B%7B%22id%22%3A%2260c5e512be1af67df2567ab1b483a40bc000f2aaa5%22%2C%22exportedName%22%3A%22submitLead%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(site)/contacto/page": "action-browser"
+      }
+    }
+  },
   "edge": {},
   "encryptionKey": "JoekcSuJE8R1EtDhrF+s1umAC9zBRGlmbF4+Jh6WboM="
 }

@@ -49,7 +49,7 @@ export default function RootLayout({
       <body className="min-h-dvh antialiased">
         {children}
         <WhatsAppButton
-          phoneNumber="+13472567890"
+          phoneNumber="+13477947390"
           message="Hola, me gustaría solicitar información sobre sus servicios de revestimiento industrial."
           position="bottom-right"
         />

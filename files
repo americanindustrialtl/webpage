@@ -1,0 +1,64 @@
+// app/(site)/layout.tsx
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+
+// app/(site)/page.tsx
+import Hero from "@/components/hero"
+import ServicesGrid from "@/components/services-grid"
+import ProcessSection from "@/components/process-section"
+import StatsRow from "@/components/stats-row"
+import MissionBanner from "@/components/mission-banner"
+
+// app/(site)/servicios/page.tsx
+import ServicesGrid from "@/components/services-grid"
+import ProcessSection from "@/components/process-section"
+
+// app/(site)/nosotros/page.tsx
+import StatsRow from "@/components/stats-row"
+
+// app/(site)/contacto/page.tsx
+import ContactForm from "@/components/contact-form"
+
+// components/site-header.tsx
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+// components/hero.tsx
+import { Button } from "@/components/ui/button"
+
+<div className="absolute inset-0 z-0 ..."/>
+<div className="relative z-10 max-w-6xl ...">
+<div className="relative z-10"> // wrapper of the text column
+
+// components/contact-form.tsx
+import { submitLead } from "@/app/actions"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+
+// tsconfig.json
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "target": "ES6",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*", "./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

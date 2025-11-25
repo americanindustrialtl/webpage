@@ -7,13 +7,7 @@ import { Button } from "./ui/button"
 interface VideoPlayerProps {
   src: string
   poster?: string
-  title: string
-  className?: string
-  autoplay?: boolean
-  muted?: boolean
-  loop?: boolean
-  controls?: boolean
-  lazy?: boolean"use client"
+  title: string"use client"
 
 import { useState, useRef } from "react"
 import { Play, Pause, Volume2, VolumeX } from "lucide-react"

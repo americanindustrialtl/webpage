@@ -98,7 +98,6 @@ export default function VideoPlayer({
       >
         {shouldLoad && (
           <>
-            <source src={`${src}.webm`} type="video/webm" />
             <source src={`${src}.mp4`} type="video/mp4" />
           </>
         )}

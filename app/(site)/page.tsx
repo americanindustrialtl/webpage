@@ -71,7 +71,7 @@ export default function Page() {
           <VideoSection
             title="25 Años Protegiendo la Industria Latinoamericana"
             description="Descubra cómo American Industrial ha revolucionado la protección de tanques industriales con tecnología americana de vanguardia, sirviendo a más de 500 clientes en 7 países de Latinoamérica."
-            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
+            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI"
             posterSrc="/videos/posters/company-overview.jpg"
           />
         </div>

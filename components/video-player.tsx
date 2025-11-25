@@ -13,6 +13,21 @@ interface VideoPlayerProps {
   muted?: boolean
   loop?: boolean
   controls?: boolean
+  lazy?: boolean"use client"
+
+import { useState, useRef } from "react"
+import { Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { Button } from "./ui/button"
+
+interface VideoPlayerProps {
+  src: string
+  poster?: string
+  title: string
+  className?: string
+  autoplay?: boolean
+  muted?: boolean
+  loop?: boolean
+  controls?: boolean
   lazy?: boolean
 }
 
@@ -27,9 +42,20 @@ export default function VideoPlayer({
   controls = true,
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(autoplay)
   const [isMuted, setIsMuted] = useState(muted)
   const [isLoaded, setIsLoaded] = useState(false)
+
+  // Handle autoplay after video loads
+  const handleLoadedData = () => {
+    setIsLoaded(true)
+    if (autoplay && videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Autoplay failed:", error)
+        setIsPlaying(false)
+      })
+    }
+  }
 
   const togglePlay = () => {
     if (!videoRef.current) return
@@ -47,10 +73,6 @@ export default function VideoPlayer({
 
     videoRef.current.muted = !isMuted
     setIsMuted(!isMuted)
-  }
-
-  const handleLoadedData = () => {
-    setIsLoaded(true)
   }
 
   const handlePlay = () => setIsPlaying(true)

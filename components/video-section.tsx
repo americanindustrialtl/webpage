@@ -6,9 +6,10 @@ interface VideoSectionProps {
   videoSrc: string
   posterSrc?: string
   reverse?: boolean
+  autoplay?: boolean
 }
 
-export default function VideoSection({ title, description, videoSrc, posterSrc, reverse = false }: VideoSectionProps) {
+export default function VideoSection({ title, description, videoSrc, posterSrc, reverse = false, autoplay = false }: VideoSectionProps) {
   return (
     <div className={`grid lg:grid-cols-2 gap-12 items-center ${reverse ? "lg:grid-flow-col-dense" : ""}`}>
       <div className={reverse ? "lg:col-start-2" : ""}>

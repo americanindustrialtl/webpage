@@ -97,7 +97,7 @@ export default function Page() {
           <VideoSection
             title="Tecnología de Aplicación Avanzada"
             description="Vea en acción nuestros equipos especializados y procesos certificados NACE. Cada aplicación es ejecutada por técnicos certificados con los más altos estándares de calidad internacional."
-            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
+            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI"
             posterSrc="/videos/posters/technology-showcase.jpg"
             reverse={true}
           />

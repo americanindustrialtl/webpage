@@ -26,6 +26,7 @@ export default function VideoSection({ title, description, videoSrc, posterSrc, 
             lazy={true}
             muted={true}
             loop={true}
+            autoplay={true}
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { Play, Pause, Volume2, VolumeX } from "lucide-react"
 import { Button } from "./ui/button"
 
@@ -25,36 +25,11 @@ export default function VideoPlayer({
   muted = true,
   loop = false,
   controls = true,
-  lazy = true,
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(muted)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [shouldLoad, setShouldLoad] = useState(!lazy)
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!lazy) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShouldLoad(true)
-            observer.disconnect()
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [lazy])
 
   const togglePlay = () => {
     if (!videoRef.current) return
@@ -87,25 +62,21 @@ export default function VideoPlayer({
         ref={videoRef}
         className="w-full h-full object-cover rounded-xl"
         poster={poster}
+        src={src}
         muted={isMuted}
         loop={loop}
         playsInline
-        preload={lazy ? "none" : "metadata"}
+        preload="metadata"
         onLoadedData={handleLoadedData}
         onPlay={handlePlay}
         onPause={handlePause}
         aria-label={title}
       >
-        {shouldLoad && (
-          <>
-            <source src={`${src}.mp4`} type="video/mp4" />
-          </>
-        )}
         Your browser does not support the video tag.
       </video>
 
       {/* Loading State */}
-      {!isLoaded && shouldLoad && (
+      {!isLoaded && (
         <div className="absolute inset-0 bg-gray-100 rounded-xl flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
         </div>

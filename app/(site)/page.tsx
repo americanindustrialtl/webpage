@@ -71,7 +71,7 @@ export default function Page() {
           <VideoSection
             title="25 Años Protegiendo la Industria Latinoamericana"
             description="Descubra cómo American Industrial ha revolucionado la protección de tanques industriales con tecnología americana de vanguardia, sirviendo a más de 500 clientes en 7 países de Latinoamérica."
-            videoSrc="/videos/company-overview"
+            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
             posterSrc="/videos/posters/company-overview.jpg"
           />
         </div>
@@ -97,7 +97,7 @@ export default function Page() {
           <VideoSection
             title="Tecnología de Aplicación Avanzada"
             description="Vea en acción nuestros equipos especializados y procesos certificados NACE. Cada aplicación es ejecutada por técnicos certificados con los más altos estándares de calidad internacional."
-            videoSrc="/videos/technology-showcase"
+            videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
             posterSrc="/videos/posters/technology-showcase.jpg"
             reverse={true}
           />

@@ -45,7 +45,7 @@ export default function ServiciosPage() {
         <VideoSection
           title="Proceso de Aplicación Certificado NACE"
           description="Observe nuestro proceso completo desde la preparación de superficie hasta la aplicación final. Cada etapa es ejecutada siguiendo estrictos protocolos de calidad internacional para garantizar la máxima protección de sus activos."
-          videoSrc="/videos/service-process"
+          videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
           posterSrc="/videos/posters/service-process.jpg"
         />
       </section>
@@ -59,7 +59,7 @@ export default function ServiciosPage() {
         <VideoSection
           title="Control de Calidad y Certificación"
           description="Nuestro riguroso proceso de control de calidad incluye inspecciones en cada fase, documentación completa y certificación final. Vea cómo garantizamos los más altos estándares en cada proyecto."
-          videoSrc="/videos/quality-control"
+          videoSrc="https://lrc2kadczpgksbkd.public.blob.vercel-storage.com/ATLI.mp4"
           posterSrc="/videos/posters/quality-control.jpg"
           reverse={true}
         />

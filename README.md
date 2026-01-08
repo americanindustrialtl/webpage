@@ -93,7 +93,7 @@ npm run dev
 
 ## Project Structure
 
-\`\`\`
+```
 ├── app/
 │   ├── (site)/              # Main site pages
 │   │   ├── page.tsx         # Homepage
@@ -117,7 +117,7 @@ npm run dev
     ├── images/              # Images
     ├── videos/              # Video files
     └── downloads/           # Downloadable files
-\`\`\`
+```
 
 ## Documentation
 
